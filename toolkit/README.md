@@ -1,5 +1,7 @@
+## decwindbx - the "toolkit"
+* finally scripts and binaries!
 
-**Some binaries provided "as is".**
+
 
 | shell> file file.dbx
 | file.dbx: data
