@@ -1,5 +1,5 @@
 # sqlite3dbx
-* the magic behind DBX encryption
+*the magic behind DBX encryption
 
 Please note that the following code was cloned by the
 [https://github.com/newsoft/sqlite3-dbx](https://github.com/newsoft/sqlite3-dbx).
