@@ -1,4 +1,4 @@
-# sqlite3dbx
+## sqlite3dbx
 *the magic behind DBX encryption
 
 Please note that the following code was cloned by the
