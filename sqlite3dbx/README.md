@@ -3,7 +3,7 @@
 
 Please note that the following code was cloned by the
 [https://github.com/newsoft/sqlite3-dbx](https://github.com/newsoft/sqlite3-dbx).
-repository. The following is the original Readme.
+repository. The following is the original *Readme*.
 
 ## ABOUT SQLITE3-DBX
 
