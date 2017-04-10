@@ -1,5 +1,5 @@
 ## decwindbx - the "toolkit"
-*finally scripts and binaries!
+*finally scripts and binaries!*
 
 wip...
 
