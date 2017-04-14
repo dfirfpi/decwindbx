@@ -14,6 +14,35 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
+# -----------------------------------------------------------------------------
+#
+# Dropbox DBX key extraction *offline* (why not? even online)
+#
+# python27 dbx-keygen-windpapi.py
+#   --masterkey=/mnt/win81/Users/user/AppData/Roaming/Microsoft/Protect/S-1-5-21-2128076315-4144300488-3078399761-1001/
+#   --sid=S-1-5-21-2128076315-4144300488-3078399761-1001
+#   --password=fuffa
+#   --ntuser=NTUSER.DAT
+#
+# In case you have not the password but its SHA1 (see Happy DPAPI blog post)
+#
+# python27 dbx-keygen-windpapi.py
+#   --masterkey=/mnt/win81/Users/user/AppData/Roaming/Microsoft/Protect/S-1-5-21-2128076315-4144300488-3078399761-1001/
+#   --sid=S-1-5-21-2128076315-4144300488-3078399761-1001
+#   --hash=51d2e3226fca7f5932784a8e44cc9240
+#   --ntuser=NTUSER.DAT
+#
+# In case you need the old credentials, add the credhist paramenter
+#
+# python27 dbx-keygen-windpapi.py
+#   --masterkey=/mnt/win81/Users/user/AppData/Roaming/Microsoft/Protect/S-1-5-21-2128076315-4144300488-3078399761-1001/
+#   --sid=S-1-5-21-2128076315-4144300488-3078399761-1001
+#   --credhist=/mnt/win81/Users/user/AppData/Roaming/Microsoft/Protect/CREDHIST
+#   --password=fuffa
+#   --ntuser=NTUSER.DAT
+#
+# -----------------------------------------------------------------------------
 
 from __future__ import print_function
 
@@ -72,7 +101,8 @@ if __name__ == "__main__":
                 r.open('Software\\Dropbox\\'+key_name).value('Client').value())
 
             if options.h:
-                datablob.try_decrypt_with_hash(options.h, mkp, options.sid)
+                datablob.try_decrypt_with_hash(
+                    options.h.decode('hex'), mkp, options.sid)
             if options.password:
                 datablob.try_decrypt_with_password(
                     options.password, mkp, options.sid)
