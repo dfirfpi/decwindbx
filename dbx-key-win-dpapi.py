@@ -19,7 +19,7 @@
 #
 # Dropbox DBX key extraction *offline* (why not? even online)
 #
-# python27 dbx-keygen-windpapi.py
+# python27 dbx-key-win-dpapi.py
 #   --masterkey=/mnt/win81/Users/user/AppData/Roaming/Microsoft/Protect/S-1-5-21-2128076315-4144300488-3078399761-1001/
 #   --sid=S-1-5-21-2128076315-4144300488-3078399761-1001
 #   --password=fuffa
@@ -27,7 +27,7 @@
 #
 # In case you have not the password but its SHA1 (see Happy DPAPI blog post)
 #
-# python27 dbx-keygen-windpapi.py
+# python27 dbx-key-win-dpapi.py
 #   --masterkey=/mnt/win81/Users/user/AppData/Roaming/Microsoft/Protect/S-1-5-21-2128076315-4144300488-3078399761-1001/
 #   --sid=S-1-5-21-2128076315-4144300488-3078399761-1001
 #   --hash=51d2e3226fca7f5932784a8e44cc9240
@@ -35,7 +35,7 @@
 #
 # In case you need the old credentials, add the credhist paramenter
 #
-# python27 dbx-keygen-windpapi.py
+# python27 dbx-key-win-dpapi.py
 #   --masterkey=/mnt/win81/Users/user/AppData/Roaming/Microsoft/Protect/S-1-5-21-2128076315-4144300488-3078399761-1001/
 #   --sid=S-1-5-21-2128076315-4144300488-3078399761-1001
 #   --credhist=/mnt/win81/Users/user/AppData/Roaming/Microsoft/Protect/CREDHIST
