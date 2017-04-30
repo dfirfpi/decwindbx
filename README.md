@@ -1,6 +1,6 @@
 ## decwindbx
 *a sort of a toolkit to decrypt Dropbox DBX files*
 
-Well, wip :)
+http://blog.digital-forensics.it/2017/04/brush-up-on-dropbox-dbx-decryption.html
 
 
